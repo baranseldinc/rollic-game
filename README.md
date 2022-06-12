@@ -1,7 +1,7 @@
 # Game Store
 ## _The Simplest Way to Add and Search in Games World_
 
-GameStore is an applicaton that provides users to simply add their games and make all over the games
+GameStore is an application that provides users to simply add their games and make search for all games. 
 
 ## Features
 
