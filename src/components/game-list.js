@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Persistence from "./persistence";
+import Persistence from "../utils/persistence";
 
 export default function GameList() {
     const [list, setList] = useState([]);
@@ -48,7 +48,7 @@ export default function GameList() {
                         filteredList.map((game, index) => {
                             return (
                                 <div key={index} className="game-card">
-                                    <img src={`img/${game.icon_file}`} alt={`alt-${index}`} />
+                                    <img src={`${game.icon_data}`} alt={`alt-${index}`} />
                                     <div className="game-details">
                                         <div className="game-detail">Game Name: <span>{game.game_name}</span></div>
                                         <div className="game-detail">Bundle: <span>{game.bundle}</span></div>

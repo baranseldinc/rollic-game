@@ -1,7 +1,8 @@
 import React from "react";
 import { Link, Navigate } from "react-router-dom";
-import CommonValidations from "./common-validations";
-import Persistence from "./persistence";
+import CommonValidations from "../utils/common-validations";
+import Persistence from "../utils/persistence";
+import FileHandler from "../utils/fileHandler";
 
 class AddNewGame extends React.Component {
     constructor(props) {
@@ -23,7 +24,7 @@ class AddNewGame extends React.Component {
                         CommonValidations.mustBeString, CommonValidations.requried
                     ]
                 },
-                icon_file: { value: '', error: 'initial-state' }
+                icon_file: { value: '', error: 'initial-state', data: '' }
             },
 
             navigateToList: false
@@ -41,7 +42,8 @@ class AddNewGame extends React.Component {
             game_name: this.state.fields.game_name.value,
             bundle: this.state.fields.bundle.value,
             owner: this.state.fields.owner.value,
-            icon_file: this.state.fields.icon_file.value
+            icon_file: this.state.fields.icon_file.value,
+            icon_data: this.state.fields.icon_file.data
         });
 
         window.toastr.success('A new game has been addedd successfully!', 'Successfull');
@@ -73,11 +75,14 @@ class AddNewGame extends React.Component {
     handleChangeIcon = e => {
         const pathArr = e.target?.value?.split('\\');
         const fileName = pathArr[pathArr.length - 1];
-        this.setState(prevState => {
-            prevState.fields.icon_file.value = fileName;
-            prevState.fields.icon_file.error = '';
-            return prevState;
-        })
+        FileHandler().getData(e, data => {
+            this.setState(prevState => {
+                prevState.fields.icon_file.value = fileName;
+                prevState.fields.icon_file.error = '';
+                prevState.fields.icon_file.data = data;
+                return prevState;
+            })
+        });
     }
 
     isFormValid = () => {
