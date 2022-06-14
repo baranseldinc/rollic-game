@@ -2,6 +2,7 @@
 ## _The Simplest Way to Add and Search in Games World_
 
 GameStore is an application that provides users to simply add their games and make search for all games. 
+No backend functionality for storing so we keep data of uploaded files as base64 in the browser
 
 ## Features
 
