@@ -1,4 +1,4 @@
-# Game Store
+# Game Store (Clint Side)
 ## _The Simplest Way to Add and Search in Games World_
 
 GameStore is an application that provides users to simply add their games and make search for all games. 
