@@ -41,4 +41,7 @@ And just run
 
 You can reach app via `http://localhost:3000/
 
-Enjoy time
+Wanna check it? Then visit here https://rollic-app-store.herokuapp.com/
+
+
+_Enjoy time_
