@@ -20,15 +20,25 @@ Instructions for installing and running application as follows;
 Open your shell or terminal and locate where you want to load app
 
 Clone application in that directiory
+
 `git clone https://github.com/baranseldinc/rollic-game.git`
 
+
 Change directory
+
 `cd rollic-game`
 
+
 Install dependencies
+
 `npm install`
+
 
 And just run
-`npm install`
+
+`npm start`
+
 
 You can reach app via `http://localhost:3000/
+
+Enjoy time
