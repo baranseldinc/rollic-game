@@ -15,8 +15,20 @@ Game Store uses client side techs to work properly:
 - [React.JS] - especially for fucntionality and state management
 - [React-Router-DOM] - For routing and navigating at client side
 
-To run application just do that
+Instructions for installing and running application as follows;
 
-`npm start`
+Open your shell or terminal and locate where you want to load app
 
-_Enjoy time_
+Clone application in that directiory
+`git clone https://github.com/baranseldinc/rollic-game.git`
+
+Change directory
+`cd rollic-game`
+
+Install dependencies
+`npm install`
+
+And just run
+`npm install`
+
+You can reach app via `http://localhost:3000/
